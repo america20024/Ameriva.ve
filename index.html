@@ -1,124 +1,368 @@
 <!DOCTYPE html>
-<html class="dark" lang="es">
-<head>
+
+<html class="dark" lang="es"><head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<title>Ameriva - Logística y Aduanas</title>
-
-<meta name="description" content="Servicios de logística y aduanas. Importaciones y exportaciones rápidas, seguras y sin complicaciones.">
-<meta name="keywords" content="aduanas, logística, importación, exportación, agencia aduanera">
-<meta name="author" content="Ameriva">
-
-<script src="https://cdn.tailwindcss.com"></script>
-
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ameriva - Arquitectos de Logística Global</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface-variant": "#e0c0b2",
+                    "on-tertiary": "#003352",
+                    "surface-tint": "#ffb694",
+                    "surface-dim": "#131313",
+                    "surface-bright": "#3a3939",
+                    "primary-fixed": "#ffdbcc",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "outline": "#a88b7e",
+                    "on-secondary-fixed": "#0b1c30",
+                    "on-background": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#004b74",
+                    "on-tertiary-container": "#002f4c",
+                    "on-secondary-container": "#a9bad3",
+                    "on-primary-fixed": "#351000",
+                    "tertiary-container": "#009beb",
+                    "error": "#ffb4ab",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "on-surface": "#e5e2e1",
+                    "secondary-fixed": "#d3e4fe",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "inverse-on-surface": "#313030",
+                    "tertiary": "#94ccff",
+                    "primary-container": "#f16b1b",
+                    "surface": "#131313",
+                    "secondary-container": "#3a4a5f",
+                    "primary": "#ffb694",
+                    "inverse-primary": "#a14000",
+                    "on-primary": "#561f00",
+                    "outline-variant": "#584237",
+                    "on-primary-container": "#501c00",
+                    "on-secondary": "#213145",
+                    "on-error-container": "#ffdad6",
+                    "surface-variant": "#353534",
+                    "background": "#131313",
+                    "secondary": "#b7c8e1",
+                    "on-primary-fixed-variant": "#7b2f00",
+                    "tertiary-fixed": "#cde5ff",
+                    "on-tertiary-fixed": "#001d32",
+                    "surface-container-highest": "#353534",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-container-lowest": "#0e0e0e",
+                    "error-container": "#93000a",
+                    "on-error": "#690005",
+                    "primary-fixed-dim": "#ffb694",
+                    "tertiary-fixed-dim": "#94ccff",
+                    "surface-container": "#201f1f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
 <style>
-body { font-family: 'Arial', sans-serif; }
-</style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(19, 19, 19, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #F16B1B 0%, #a14000 100%);
+        }
+        .technical-border-bottom {
+            border-bottom: 2px solid rgba(88, 66, 55, 0.2);
+        }
+        .technical-border-bottom:focus-within {
+            border-bottom: 2px solid #F16B1B;
+        }
+    </style>
 </head>
-
-<body class="bg-black text-white">
-
-<!-- NAV -->
-<nav class="fixed top-0 w-full bg-black/70 backdrop-blur-lg z-50">
-<div class="flex justify-between items-center px-8 h-20">
-
-<img src="logo.jpg" class="h-12"/>
-
-<a href="https://wa.me/584244176230" class="bg-orange-600 px-6 py-2 rounded font-bold hover:bg-orange-700">
-Cotizar Envío
-</a>
-
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/60 backdrop-blur-lg shadow-[0px_24px_48px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center w-full px-8 h-20 max-w-[1440px] mx-auto">
+<!-- Brand Logo -->
+<div class="flex items-center gap-4">
+<img alt="Ameriva Logo" class="h-12 w-auto brightness-200 contrast-125" src="https://lh3.googleusercontent.com/aida/ADBb0ujZmzo_3lf4Xc9TkMCWwYGz2qkptdLKZHZf5mB2Ja-3Ovx6hcRF_6d3owD5kV6iVthQFqmDGeXhbVMfYdFss8B_XU1UOFgVUP6HCpaoCL_i8yHqqcst09Ory-Zrwskzva5BbSDSOOGfxLDI7EyLwCupzl71nSJsMxEF299Fh2r2ekRfTPgyL0FCGxo8DmE9Wila8NmjFYxgNuXuP25ogoDU3Scv1DO1yHwKdOrzMK4YLSsOyoKo50DiQJ5M6t5HRjl2lZt9o6TG3Vk"/>
+</div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-10 font-['Manrope'] font-medium tracking-tight text-sm">
+<a class="text-zinc-500 hover:text-white transition-colors duration-300" href="#">Inicio</a>
+<a class="text-zinc-500 hover:text-white transition-colors duration-300" href="#">Servicios</a>
+<a class="text-zinc-500 hover:text-white transition-colors duration-300" href="#">Inventario</a>
+<a class="text-zinc-500 hover:text-white transition-colors duration-300" href="#">Red</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-6">
+<button class="bg-[#F16B1B] text-white px-6 py-2.5 font-bold text-sm tracking-tight hover:bg-[#a14000] transition-all scale-100 active:scale-95">
+                    Enviar Ahora
+                </button>
+</div>
 </div>
 </nav>
-
 <main class="pt-20">
-
-<!-- HERO -->
-<section class="h-screen flex items-center px-8">
-<div>
-
-<h1 class="text-5xl font-black mb-6 max-w-3xl">
-Gestionamos tu carga sin errores ni retrasos
-</h1>
-
-<p class="text-gray-300 max-w-xl mb-8">
-Nos encargamos de tus importaciones y exportaciones de forma rápida, segura y legal. Tú te enfocas en crecer, nosotros en mover tu mercancía.
-</p>
-
-<div class="flex gap-4">
-<a href="https://wa.me/584244176230" class="bg-orange-600 px-6 py-3 font-bold hover:bg-orange-700">
-WhatsApp
-</a>
-
-<a href="mailto:gerencia@ameriva.com.ve" class="border px-6 py-3 font-bold">
-Email
-</a>
+<!-- Hero Section -->
+<section class="relative h-[921px] min-h-[700px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Puerto de aguas profundas" class="w-full h-full object-cover brightness-50" src="https://lh3.googleusercontent.com/aida/ADBb0ugdLVMH02EUosDSiCjekxilUepyVRiNQ1qs0B8b3NHB5DYYrjM7JFVCSQB9wMQn-IFc6HLVY1EU4cZLR33mYEIBj30hnhnbjgEjD65eq-9nOjfm-bzrivbI_hvIAdg6VBbIU-cZedBKT-ph_xe724OkXmrkJH95_kcm0AxpjcWlhc8kFXKyaWdEopEvb5tzE6llUBQWC_FKGf1wZTHNArgOMMCLTZJkjANwIx622wVofj6ikgO7PlxVwQX8"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
 </div>
-
+<div class="relative z-10 px-8 md:px-20 max-w-7xl">
+<label class="text-primary font-label text-xs tracking-[0.2em] uppercase mb-6 block">Vanguardia Logística</label>
+<h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] text-white mb-8 max-w-4xl">
+                    Tu carga, en manos expertas desde origen hasta destino
+                </h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl font-light leading-relaxed mb-12">
+                    Arquitectamos flujos globales de mercancía con precisión técnica y tecnología de última generación. Transformamos la complejidad aduanera en agilidad operativa.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="primary-gradient text-white px-8 py-4 font-bold flex items-center gap-3 hover:scale-105 transition-transform" href="https://wa.me/yournumber">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                        Contacto por WhatsApp
+                    </a>
+<a class="bg-surface-container-highest border border-outline-variant/20 text-white px-8 py-4 font-bold flex items-center gap-3 hover:bg-surface-container-high transition-all" href="mailto:info@ameriva.com">
+<span class="material-symbols-outlined">mail</span>
+                        Consulta por Email
+                    </a>
 </div>
-</section>
-
-<!-- SERVICIOS -->
-<section class="px-8 py-20">
-<h2 class="text-3xl font-bold mb-10">Servicios</h2>
-
-<div class="grid md:grid-cols-3 gap-8">
-
-<div>
-<h3 class="font-bold mb-2">Agenciamiento Aduanal</h3>
-<p class="text-gray-400">Gestión completa para importación y exportación sin errores.</p>
-</div>
-
-<div>
-<h3 class="font-bold mb-2">Carga Multimodal</h3>
-<p class="text-gray-400">Transporte terrestre, marítimo y aéreo optimizado.</p>
-</div>
-
-<div>
-<h3 class="font-bold mb-2">Almacenaje</h3>
-<p class="text-gray-400">Depósitos seguros bajo control aduanero.</p>
-</div>
-
 </div>
 </section>
-
-<!-- CTA -->
-<section class="text-center py-20">
-<h2 class="text-4xl font-bold mb-6">¿Listo para cotizar?</h2>
-
-<a href="https://wa.me/584244176230" class="bg-orange-600 px-10 py-4 font-bold hover:bg-orange-700">
-Hablar por WhatsApp
-</a>
+<!-- Dynamic Stats Segment -->
+<section class="bg-surface-container-lowest py-12 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col">
+<span class="text-primary text-4xl font-black tracking-tighter">48h</span>
+<span class="text-on-surface-variant text-xs uppercase tracking-widest mt-2">Promedio de Despacho</span>
+</div>
+<div class="flex flex-col">
+<span class="text-primary text-4xl font-black tracking-tighter">15k+</span>
+<span class="text-on-surface-variant text-xs uppercase tracking-widest mt-2">Operaciones Exitosas</span>
+</div>
+<div class="flex flex-col">
+<span class="text-primary text-4xl font-black tracking-tighter">100%</span>
+<span class="text-on-surface-variant text-xs uppercase tracking-widest mt-2">Cumplimiento Fiscal</span>
+</div>
+<div class="flex flex-col">
+<span class="text-primary text-4xl font-black tracking-tighter">24/7</span>
+<span class="text-on-surface-variant text-xs uppercase tracking-widest mt-2">Monitoreo Real</span>
+</div>
+</div>
 </section>
-
+<!-- Locations: Bento Grid -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<h2 class="text-4xl font-bold tracking-tighter text-white max-w-md">Presencia Estratégica en Nodos Críticos</h2>
+<p class="text-on-surface-variant text-sm max-w-xs leading-relaxed">
+                    Operamos directamente en las arterias principales del comercio regional, garantizando soberanía operativa en cada punto de entrada.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 h-full md:h-[600px]">
+<!-- San Antonio del Táchira -->
+<div class="md:col-span-7 relative group overflow-hidden bg-surface-container-low">
+<img alt="Frontera San Antonio del Táchira" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDU3V7ND0OsBymtKSB3apashjbn7YUihbuu3PfVBWcH4LdYKhIrKs9IX2NCdssMEu2HroBwvL7AMirXcH6SBomvIjKpqdGFjZuPhtgYfYP7G14lDKyg0VCbLadiQXhNYS7BG7L-9nJ_zBESU0b6uVHmTZGtO44jQT9by5Mu8QqgwGh5qwbt5SAtXySbBllDZmzjbYl9LoN9iJPenTzM_12iRwR9c9HwnGOEvCC-4CTU8Zg87UnyiJC2xJ1YNEgNUa4f8Lz786RyjyX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="relative p-10 h-full flex flex-col justify-end">
+<span class="text-primary font-bold text-sm tracking-widest mb-2">OPERACIÓN FRONTERIZA</span>
+<h3 class="text-3xl font-black text-white mb-4">San Antonio del Táchira</h3>
+<p class="text-on-surface-variant max-w-md mb-6">Expertos en el flujo binacional, gestionando la integración comercial con eficiencia aduanera y cumplimiento normativo estricto.</p>
+<div class="flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-all cursor-pointer">
+                            Explorar Capacidad <span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Puerto Cabello -->
+<div class="md:col-span-5 relative group overflow-hidden bg-surface-container-low">
+<img alt="Puerto Cabello Terminal" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChw9H_pSFOHNENXo1f_qsqH2c5jYdvOQTtaQkuaouEGBg6JQk90598IPghQ1WoZ6Sku74Wj5jHmbIAOEQ6FNyOznEx8dDWCBNcWX38nGx0Q1rtDtSGHsQf2vq-bRsoY3AEEtVPxOBf-ds9FbzbiUkU_480HOWZ1A4W8-AYbi4fY4dzMw6ddrQy-le15DFVnQiC_sMR7Yep3KxPVSgh5Kjma741WkNyY3PiVF82NReek0ixeR2gWgF2LPzGVZufUtWNQRk4ElsSVlIB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="relative p-10 h-full flex flex-col justify-end">
+<span class="text-primary font-bold text-sm tracking-widest mb-2">OPERACIÓN MARÍTIMA</span>
+<h3 class="text-3xl font-black text-white mb-4">Puerto Cabello</h3>
+<p class="text-on-surface-variant max-w-sm mb-6">El epicentro de la logística marítima nacional bajo nuestro control total de procesos.</p>
+<div class="flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-all cursor-pointer">
+                            Ver Terminal <span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Digital Innovation: Glassmorphic Modules -->
+<section class="bg-surface py-24 px-8 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-4xl font-bold tracking-tighter text-white mb-8 leading-tight">
+                            Innovación Digital: <br/>El Ecosistema Ameriva
+                        </h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+<div>
+<h4 class="text-white font-bold mb-2">Visibilidad en Tiempo Real</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Nuestra plataforma propietaria permite el rastreo granular de cada bulto, eliminando la incertidumbre del tránsito internacional.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div>
+<h4 class="text-white font-bold mb-2">Seguridad Algorítmica</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Protegemos su información y sus activos con protocolos de cifrado de nivel bancario en cada paso de la cadena.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<div>
+<h4 class="text-white font-bold mb-2">Integración Directa API</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Conectamos nuestros sistemas con su ERP para un flujo de datos bidireccional y una contabilidad automatizada.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="bg-surface-container-high p-4 rounded-lg shadow-2xl relative z-10">
+<img alt="Panel de control técnico" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu3EUJA9-OMSWxWlL08wCsUYWEZnOV8O-98o9L2IGm50syIEd_6aRd9BoSkCdWBKgj9dx3PPFsbKLwkinuEXzkZ-TZaPVjkcmttMPWL7vB5s7VmdCt-aaWheyOIP8Y1_EjNjXMO8lBwQoT8abCXoYw-2ZU7Jy80ZOTANK9O1Casdw2mOc9k5cvviWzbmjTqSuai1HAC1wx2VRKJwW104UaD9NpsdXWwDwTx2YqyZMVALuu2jyUlFiRIbzaCqaUS6FpxTaZy5PT32sC"/>
+</div>
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-[100px] z-0"></div>
+<div class="absolute -bottom-10 -left-10 w-64 h-64 bg-tertiary/20 rounded-full blur-[100px] z-0"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services: High Contrast List -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<h2 class="text-xs font-label tracking-[0.4em] uppercase text-primary mb-12">Portafolio de Soluciones</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-outline-variant/10">
+<!-- Service 1 -->
+<div class="bg-background p-10 group hover:bg-surface-container-low transition-colors">
+<span class="text-zinc-700 text-sm font-black mb-4 block">01</span>
+<h3 class="text-xl font-bold text-white mb-4">Agenciamiento Aduanal</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Clasificación arancelaria experta y gestión documental para minimizar tiempos de espera en puertos y fronteras.</p>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all">north_east</span>
+</div>
+<!-- Service 2 -->
+<div class="bg-background p-10 group hover:bg-surface-container-low transition-colors">
+<span class="text-zinc-700 text-sm font-black mb-4 block">02</span>
+<h3 class="text-xl font-bold text-white mb-4">Carga Multimodal</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Coordinación táctica de transporte marítimo, terrestre y aéreo optimizando costos y plazos de entrega.</p>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all">north_east</span>
+</div>
+<!-- Service 3 -->
+<div class="bg-background p-10 group hover:bg-surface-container-low transition-colors">
+<span class="text-zinc-700 text-sm font-black mb-4 block">03</span>
+<h3 class="text-xl font-bold text-white mb-4">Almacenaje en Depósito</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Depósitos temporales bajo control aduanero que permiten diferir el pago de impuestos hasta la nacionalización.</p>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all">north_east</span>
+</div>
+<!-- Service 4 -->
+<div class="bg-background p-10 group hover:bg-surface-container-low transition-colors">
+<span class="text-zinc-700 text-sm font-black mb-4 block">04</span>
+<h3 class="text-xl font-bold text-white mb-4">Consultoría Normativa</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Asesoría estratégica en regulaciones de comercio exterior y cumplimiento fiscal internacional.</p>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all">north_east</span>
+</div>
+<!-- Service 5 -->
+<div class="bg-background p-10 group hover:bg-surface-container-low transition-colors">
+<span class="text-zinc-700 text-sm font-black mb-4 block">05</span>
+<h3 class="text-xl font-bold text-white mb-4">Logística de Última Milla</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Distribución capilar nacional con monitoreo satelital y escoltas de seguridad especializados.</p>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all">north_east</span>
+</div>
+<!-- Service 6 -->
+<div class="bg-background p-10 group hover:bg-surface-container-low transition-colors">
+<span class="text-zinc-700 text-sm font-black mb-4 block">06</span>
+<h3 class="text-xl font-bold text-white mb-4">Proyectos Especiales</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Logística de sobredimensión y cargas críticas para el sector energético e industrial pesado.</p>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all">north_east</span>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 px-8 bg-surface-container-lowest overflow-hidden relative">
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter text-white mb-10 leading-[1.1]">¿Listo para optimizar su flujo global?</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<a class="w-full md:w-auto primary-gradient text-white px-12 py-5 font-bold text-lg hover:scale-105 transition-transform flex items-center justify-center gap-3 shadow-[0_20px_40px_rgba(241,107,27,0.3)]" href="https://wa.me/yournumber">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                        Hablar con un Experto
+                    </a>
+<a class="w-full md:w-auto bg-surface-container-highest border border-outline-variant/30 text-white px-12 py-5 font-bold text-lg hover:bg-surface-container-high transition-all flex items-center justify-center gap-3" href="mailto:cotizaciones@ameriva.com">
+<span class="material-symbols-outlined">description</span>
+                        Solicitar Cotización
+                    </a>
+</div>
+</div>
+<!-- Decorative technical grid -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#F16B1B 1px, transparent 1px); background-size: 40px 40px;"></div>
+</section>
 </main>
-
-<!-- FOOTER -->
-<footer class="border-t border-gray-800 px-8 py-10">
-
-<img src="logo.jpg" class="h-10 mb-6"/>
-
-<p class="text-gray-500 mb-4">
-Ameriva - Agencia de Carga y Aduana
-</p>
-
-<p class="text-gray-500">
-📧 gerencia@ameriva.com.ve <br>
-📱 +58 424-4176230
-</p>
-
+<!-- Footer -->
+<footer class="bg-zinc-950 w-full py-16 px-12 border-t border-zinc-800/20">
+<div class="flex flex-col md:flex-row justify-between items-start max-w-7xl mx-auto gap-12">
+<div class="max-w-sm">
+<div class="flex items-center gap-3 mb-8">
+<img alt="Ameriva Logo" class="h-10 w-auto brightness-200 contrast-125" src="https://lh3.googleusercontent.com/aida/ADBb0ujZmzo_3lf4Xc9TkMCWwYGz2qkptdLKZHZf5mB2Ja-3Ovx6hcRF_6d3owD5kV6iVthQFqmDGeXhbVMfYdFss8B_XU1UOFgVUP6HCpaoCL_i8yHqqcst09Ory-Zrwskzva5BbSDSOOGfxLDI7EyLwCupzl71nSJsMxEF299Fh2r2ekRfTPgyL0FCGxo8DmE9Wila8NmjFYxgNuXuP25ogoDU3Scv1DO1yHwKdOrzMK4YLSsOyoKo50DiQJ5M6t5HRjl2lZt9o6TG3Vk"/>
+</div>
+<p class="text-zinc-500 text-sm leading-relaxed font-light">
+                    Transformando la logística global en una ventaja competitiva. Arquitectos de la cadena de suministro con visión de vanguardia.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div>
+<h4 class="text-zinc-200 font-bold text-xs uppercase tracking-widest mb-6">Navegación</h4>
+<ul class="space-y-4 font-['Manrope'] text-xs font-light tracking-widest uppercase">
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="#">Servicios</a></li>
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="#">Red</a></li>
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="#">Tecnología</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-zinc-200 font-bold text-xs uppercase tracking-widest mb-6">Legal</h4>
+<ul class="space-y-4 font-['Manrope'] text-xs font-light tracking-widest uppercase">
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="#">Términos de Servicio</a></li>
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="#">Cumplimiento Global</a></li>
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="#">Política de Privacidad</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-zinc-200 font-bold text-xs uppercase tracking-widest mb-6">Acceso</h4>
+<ul class="space-y-4 font-['Manrope'] text-xs font-light tracking-widest uppercase">
+<li><a class="text-[#F16B1B] font-bold" href="#">Portal de Transportistas</a></li>
+<li><a class="text-zinc-500 hover:text-white transition-colors" href="#">Seguimiento</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Manrope'] text-xs font-light tracking-widest uppercase text-zinc-600">
+                © 2024 Ameriva Logística. Arquitectando el Flujo Global.
+            </p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-zinc-500 hover:text-[#F16B1B] cursor-pointer transition-colors">language</span>
+<span class="material-symbols-outlined text-zinc-500 hover:text-[#F16B1B] cursor-pointer transition-colors">share</span>
+</div>
+</div>
 </footer>
-
-<!-- BOTÓN FLOTANTE -->
-<a href="https://wa.me/584244176230"
-class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition">
-
-<svg viewBox="0 0 32 32" width="24" height="24" fill="white">
-<path d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.887.754 5.603 2.064 7.978L0 32l7.84-2.056A15.94 15.94 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836.396 16 .396z"/>
-</svg>
-
-</a>
-
-</body>
-</html>
+</body></html>
