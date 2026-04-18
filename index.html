@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ameriva - Logística y Aduanas</title>
+
+<meta name="description" content="Cotiza tus importaciones y exportaciones con expertos en aduanas. Rápido, seguro y sin complicaciones.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'TU_PIXEL_ID'); 
+fbq('track', 'PageView');
+</script>
+
+<script>
+function enviarWhatsApp() {
+  let nombre = document.getElementById("nombre").value;
+  let empresa = document.getElementById("empresa").value;
+  let carga = document.getElementById("carga").value;
+
+  if(!nombre || !empresa){
+    alert("Por favor completa los datos");
+    return;
+  }
+
+  let mensaje = `Hola, soy ${nombre}%0AEmpresa: ${empresa}%0ATipo de carga: ${carga}%0AEstoy interesado en cotizar un envío con Ameriva.`;
+
+  // Evento de conversión
+  fbq('track', 'Lead');
+
+  window.open(`https://wa.me/584244176230?text=${mensaje}`, '_blank');
+}
+</script>
+
+</head>
+
+<body class="bg-black text-white font-sans">
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full bg-black/80 backdrop-blur z-50 px-8 h-20 flex justify-between items-center">
+<img src="logo.jpg" class="h-12">
+
+<a href="#formulario" class="bg-orange-600 px-6 py-2 font-bold hover:bg-orange-700">
+Cotizar Envío
+</a>
+</nav>
+
+<main class="pt-20">
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center px-8">
+<div>
+
+<h1 class="text-5xl font-black mb-6 max-w-3xl">
+Importa y exporta sin errores ni retrasos
+</h1>
+
+<p class="text-gray-300 max-w-xl mb-8">
+Gestionamos todo tu proceso aduanero de forma rápida, segura y legal. Tú vendes, nosotros movemos tu carga.
+</p>
+
+<div class="flex gap-4">
+<a href="#formulario" class="bg-orange-600 px-6 py-3 font-bold hover:bg-orange-700">
+Cotizar ahora
+</a>
+
+<a href="https://wa.me/584244176230" class="border px-6 py-3 font-bold">
+WhatsApp directo
+</a>
+</div>
+
+</div>
+</section>
+
+<!-- FORMULARIO -->
+<section id="formulario" class="px-8 py-20 bg-zinc-900">
+
+<h2 class="text-3xl font-bold mb-10 text-center">
+Recibe tu cotización en minutos
+</h2>
+
+<div class="max-w-xl mx-auto space-y-4">
+
+<input id="nombre" type="text" placeholder="Nombre"
+class="w-full p-4 bg-black border border-gray-700">
+
+<input id="empresa" type="text" placeholder="Empresa"
+class="w-full p-4 bg-black border border-gray-700">
+
+<select id="carga" class="w-full p-4 bg-black border border-gray-700">
+<option>Tipo de carga</option>
+<option>Importación</option>
+<option>Exportación</option>
+<option>Marítima</option>
+<option>Aérea</option>
+<option>Terrestre</option>
+</select>
+
+<button onclick="enviarWhatsApp()"
+class="w-full bg-orange-600 p-4 font-bold hover:bg-orange-700">
+Solicitar Cotización
+</button>
+
+</div>
+
+</section>
+
+<!-- BENEFICIOS -->
+<section class="px-8 py-20">
+
+<h2 class="text-3xl font-bold mb-10">¿Por qué elegirnos?</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div>
+<h3 class="font-bold mb-2">Rápido</h3>
+<p class="text-gray-400">Procesos ágiles sin retrasos innecesarios.</p>
+</div>
+
+<div>
+<h3 class="font-bold mb-2">Seguro</h3>
+<p class="text-gray-400">Cumplimiento total de normas aduaneras.</p>
+</div>
+
+<div>
+<h3 class="font-bold mb-2">Acompañamiento</h3>
+<p class="text-gray-400">Asesoría directa en todo momento.</p>
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-800 px-8 py-10">
+
+<img src="logo.jpg" class="h-10 mb-6">
+
+<p class="text-gray-500 mb-4">
+Ameriva - Agencia de Carga y Aduana
+</p>
+
+<p class="text-gray-500">
+📧 gerencia@ameriva.com.ve <br>
+📱 +58 424-4176230
+</p>
+
+</footer>
+
+<!-- BOTÓN FLOTANTE -->
+<a href="https://wa.me/584244176230"
+class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition">
+
+<svg viewBox="0 0 32 32" width="24" height="24" fill="white">
+<path d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.887.754 5.603 2.064 7.978L0 32l7.84-2.056A15.94 15.94 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836.396 16 .396z"/>
+</svg>
+
+</a>
+
+</body>
+</html>
