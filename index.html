@@ -7,7 +7,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -83,13 +82,16 @@
         .hero-gradient { background: linear-gradient(to bottom, rgba(14, 14, 14, 0.4), rgba(19, 19, 19, 1)); }
         .text-glow { text-shadow: 0 0 20px rgba(241, 107, 27, 0.3); }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .card-image-bg { background-size: cover; background-position: center; position: relative; }
+        .card-image-bg::before { content: ""; position: absolute; inset: 0; background: rgba(19, 19, 19, 0.85); transition: background 0.3s ease; }
+        .card-image-bg:hover::before { background: rgba(19, 19, 19, 0.75); }
     </style>
 </head>
 <body class="bg-background text-on-surface selection:bg-primary-container selection:text-white">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-stone-950/60 backdrop-blur-xl shadow-2xl shadow-black/40 flex justify-between items-center px-12 h-20 w-full max-w-full">
 <div class="flex items-center gap-4">
-<img alt="Ameriva Logo" class="w-auto h-12" data-alt="Official logo of Ameriva company featuring orange and grey geometric shapes with professional typography on a transparent background" src="https://lh3.googleusercontent.com/aida/ADBb0ujZmzo_3lf4Xc9TkMCWwYGz2qkptdLKZHZf5mB2Ja-3Ovx6hcRF_6d3owD5kV6iVthQFqmDGeXhbVMfYdFss8B_XU1UOFgVUP6HCpaoCL_i8yHqqcst09Ory-Zrwskzva5BbSDSOOGfxLDI7EyLwCupzl71nSJsMxEF299Fh2r2ekRfTPgyL0FCGxo8DmE9Wila8NmjFYxgNuXuP25ogoDU3Scv1DO1yHwKdOrzMK4YLSsOyoKo50DiQJ5M6t5HRjl2lZt9o6TG3Vk"/>
+<img alt="Ameriva Logo" class="w-auto h-12" data-alt="Official logo of Ameriva company featuring orange and grey geometric shapes with professional typography on a transparent background" src="https://lh3.googleusercontent.com/aida/ADBb0uia_bNZnQuftY2q7IvDjLKiWufDK-V63964fDcjtbgXfwafMdukaqMMjorRzFdeAuvXPQfJN55xPZ485meQ_gckGT9pu_IwxLOGjo9ZwDtKLEitJe9QUDURSGrp0RTYk0xN0MtNesEH4zuCaoPqajzNIL_CA531qHU3JvUDpGqVmhr-i2WQQoa2xlt3AGl6M6ETl5srw2nv-l3lbMad8Tv64cNacqFQtEIt_5hmVVhZ-_JUQQPF5jbIwKqlirzghVyv3GK9UzD6ULw"/>
 </div>
 <div class="hidden md:flex items-center space-x-10 font-manrope text-sm font-medium tracking-wide uppercase">
 <a class="text-orange-500 border-b-2 border-orange-600 pb-1" href="#">Inicio</a>
@@ -228,54 +230,59 @@
 </div>
 </section>
 <!-- Sedes Section -->
-<section class="py-32 bg-surface-container-low" id="sedes">
+<section class="py-32 bg-[#F5F5F0]" id="sedes">
 <div class="px-12 max-w-7xl mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 <div>
 <p class="text-primary-container font-bold text-xs uppercase tracking-[0.3em] mb-4">Presencia Estratégica</p>
-<h2 class="text-5xl font-extrabold tracking-tighter mb-12">Nuestros Centros de Operación</h2>
-<div class="space-y-12">
-<div class="flex gap-6 group">
-<div class="w-1 bg-primary-container group-hover:w-2 transition-all"></div>
-<div>
-<h3 class="text-2xl font-bold mb-3">San Antonio del Táchira</h3>
-<p class="text-stone-500 leading-relaxed">Puerta de enlace terrestre clave para el comercio binacional. Especialistas en trámites fronterizos y consolidación de carga terrestre.</p>
+<h2 class="text-5xl font-extrabold tracking-tighter mb-12 text-zinc-900">Nuestros Centros de Operación</h2>
+<div class="space-y-8 mb-12">
+<div class="flex gap-6 group card-image-bg p-8 rounded-xl bg-[url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&amp;fit=crop&amp;q=80&amp;w=800')] overflow-hidden">
+<div class="w-1 bg-primary-container group-hover:w-2 transition-all relative z-10"></div>
+<div class="relative z-10">
+<h3 class="text-2xl font-bold mb-3 text-white">San Antonio del Táchira</h3>
+<p class="text-stone-300 leading-relaxed">Puerta de enlace terrestre clave para el comercio binacional. Especialistas en trámites fronterizos y consolidación de carga terrestre.</p>
 </div>
 </div>
-<div class="flex gap-6 group">
-<div class="w-1 bg-stone-700 group-hover:bg-primary-container group-hover:w-2 transition-all"></div>
-<div>
-<h3 class="text-2xl font-bold mb-3">Puerto Cabello</h3>
-<p class="text-stone-500 leading-relaxed">El principal puerto marítimo de Venezuela. Operaciones de alto volumen con eficiencia técnica superior y tiempos de despacho optimizados.</p>
+<div class="flex gap-6 group card-image-bg p-8 rounded-xl bg-[url('https://images.unsplash.com/photo-1494412574743-019485b78287?auto=format&amp;fit=crop&amp;q=80&amp;w=800')] overflow-hidden">
+<div class="w-1 bg-zinc-700 group-hover:bg-primary-container group-hover:w-2 transition-all relative z-10"></div>
+<div class="relative z-10">
+<h3 class="text-2xl font-bold mb-3 text-white">Puerto Cabello</h3>
+<p class="text-stone-300 leading-relaxed">El principal puerto marítimo de Venezuela. Operaciones de alto volumen con eficiencia técnica superior y tiempos de despacho optimizados.</p>
 </div>
 </div>
 </div>
+<!-- Visual Gallery for extra color -->
+<div class="grid grid-cols-3 gap-4">
+<img alt="Logistics Vessel" class="rounded-lg h-32 w-full object-cover border border-zinc-200 shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9ySM8-pvyOyx__KPvbb9Gh9AHHDor32JqcVK8BHeucYMYyob8I-Qmyx4ai4V56JiPN3X1YabABA6YAlEDYx2v0ifxZAO709a5IH1VyFq6-wMaDEgv04c3GwPjV06wJInNqNh7W9HQujG_WOY1agMa1uRKVK8R-tHWigF7AbXGD20H89XwIwlaikgoDBVOJwby9YYCo3Ia8ZeW0rSqyn4LDxtFN7pvEjb3gn5Wt5_bizgIK3kWpET9dizeBulauI7y7um4HMWEvJls"/>
+<img alt="Trucking Fleet" class="rounded-lg h-32 w-full object-cover border border-zinc-200 shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9-ZeSpbkWzfBNCjnc7uy-uCpRY1dvVcUPSo4uVPKDvQX8cnOerETq4-vL3OBTImIBcsymq_w5WTgHvvmL1FNDXplYSfNAPZwfuYejJVs81pEmKQERF7fiqJ9VguiEd2JZi9M2bcJRAVoFs2Dukln2Xq7qY2O_xXnGrAuDFWPa69vEtun50RL6DNQFTDCT5JPo776p5E3bPBZfk6HS6N65Fzuh6hAFNmUEpMM71rrpRcGcgaIaSOKyHWwffknlgPBCo6ybLlTwbGxo"/>
+<img alt="Logistics Center" class="rounded-lg h-32 w-full object-cover border border-zinc-200 shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg-xTXcRJAdCw9VYwm3F1XEiOpXLKV6vzH5UYBht_1KbFlDmP5WZ4gTqdo0NpjadodR59Jzd8noKi2rcseXXi-OUypLghFXmC5tyKrtJ0A5DmISb8QRSLO0MrBuiBkOJRE2jJJQ8rSg7rpoLGrugKCAcd-DsYdP_AiM_d-qN4ZbH9ffvCED7cs0_j2h-SKM-QBk388g5Z__V666GFF0GbxlRRCy0NhGMzfkdonMT6L1IboPNwaMD5DCyx0zHy7epaHoDbADViNwQWQ"/>
 </div>
-<div class="relative h-[600px] bg-surface-container-lowest rounded-sm overflow-hidden shadow-2xl border border-white/5">
-<div class="absolute inset-0 grayscale contrast-125 opacity-40">
+</div>
+<div class="relative h-[600px] bg-white rounded-sm overflow-hidden shadow-2xl border border-zinc-200">
+<div class="absolute inset-0 grayscale opacity-80">
 <img class="w-full h-full object-cover" data-alt="Technical map visualization of maritime trade routes across South America with glowing nodes" data-location="Venezuela" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAETbb9Tld8Fdnfblw4LVeX4hpleGPqSuLuhjkk7uh8KR49OKli_LePrGtQI_3FJRdpKtgxIovhIG50FnwOuCTMm9V-RN3WOSunrShzX78sb4C5YYs65qpn_UMtfrdfH8ZXtGczApUIeTW_eSRQN63b2y9crw1SrrQLQquo6UFRHh7pMCEmgQlF_RFHtiz7vJSwoglF7EtlAMR7GbuPITX2_hzdqfqbLSVJ34taNLInd_ImhZx1Cz97GSZVxgAEEZpIwitzOAJ7lEe6"/>
 </div>
-<div class="absolute inset-0 bg-gradient-to-tr from-background to-transparent"></div>
-<!-- Pulse Dots for Locations -->
-<div class="absolute bottom-8 left-8 right-8 p-6 glass-panel bg-surface-container-lowest/60 border border-white/5 rounded">
+<div class="absolute inset-0 bg-gradient-to-tr from-[#F5F5F0] to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 p-6 glass-panel bg-white/80 border border-zinc-200 rounded">
 <p class="text-xs font-bold text-primary-container tracking-widest uppercase mb-1">Estatus Operativo</p>
-<p class="text-sm text-stone-300">Todas las sedes operando al 100% de capacidad con protocolos de seguridad activos.</p>
+<p class="text-sm text-zinc-700 font-medium">Todas las sedes operando al 100% de capacidad con protocolos de seguridad activos.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- Final CTA Section -->
-<section class="py-32 px-12 text-center bg-background relative" id="contacto">
+<section class="py-32 px-12 text-center bg-[#F5F5F0] relative" id="contacto">
 <div class="max-w-4xl mx-auto">
-<h2 class="text-5xl md:text-6xl font-black tracking-tighter mb-8 leading-[1.1]">¿Listo para optimizar su logística aduanera?</h2>
-<p class="text-stone-500 text-xl mb-12 max-w-2xl mx-auto">Nuestro equipo de expertos está preparado para asesorarle en su próximo movimiento estratégico.</p>
+<h2 class="text-5xl md:text-6xl font-black tracking-tighter mb-8 leading-[1.1] text-zinc-900">¿Listo para optimizar su logística aduanera?</h2>
+<p class="text-zinc-600 text-xl mb-12 max-w-2xl mx-auto font-medium">Nuestro equipo de expertos está preparado para asesorarle en su próximo movimiento estratégico.</p>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-<a class="w-full sm:w-auto bg-primary-container text-on-primary-fixed font-black px-10 py-5 rounded-md hover:scale-105 transition-transform flex items-center justify-center gap-3" href="https://wa.me/584244176230">
+<a class="w-full sm:w-auto bg-primary-container text-on-primary-fixed font-black px-10 py-5 rounded-md hover:scale-105 transition-transform flex items-center justify-center gap-3 shadow-lg shadow-primary-container/20" href="https://wa.me/584244176230">
 <span class="material-symbols-outlined">chat_bubble</span>
                         ASESORÍA POR WHATSAPP
                     </a>
-<a class="w-full sm:w-auto border border-stone-700 text-white font-bold px-10 py-5 rounded-md hover:bg-white/5 transition-colors" href="mailto:gerencia@ameriva.com.ve">
+<a class="w-full sm:w-auto border border-zinc-300 text-zinc-800 font-bold px-10 py-5 rounded-md hover:bg-zinc-200 transition-colors" href="mailto:gerencia@ameriva.com.ve">
                         SOLICITAR COTIZACIÓN
                     </a>
 </div>
@@ -283,50 +290,43 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-stone-950 w-full border-t border-stone-800/50">
+<footer class="bg-white w-full border-t border-zinc-200">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 max-w-7xl mx-auto">
 <div class="md:col-span-1">
-<div class="text-lg font-bold text-white mb-4">
-<img alt="Ameriva" class="w-auto mb-4 h-10" data-alt="Ameriva logo icon for footer display in orange and grey" src="https://lh3.googleusercontent.com/aida/ADBb0ujZmzo_3lf4Xc9TkMCWwYGz2qkptdLKZHZf5mB2Ja-3Ovx6hcRF_6d3owD5kV6iVthQFqmDGeXhbVMfYdFss8B_XU1UOFgVUP6HCpaoCL_i8yHqqcst09Ory-Zrwskzva5BbSDSOOGfxLDI7EyLwCupzl71nSJsMxEF299Fh2r2ekRfTPgyL0FCGxo8DmE9Wila8NmjFYxgNuXuP25ogoDU3Scv1DO1yHwKdOrzMK4YLSsOyoKo50DiQJ5M6t5HRjl2lZt9o6TG3Vk"/>
+<div class="text-lg font-bold text-zinc-900 mb-4">
+<img alt="Ameriva" class="w-auto mb-4 h-10 grayscale brightness-0" data-alt="Ameriva logo icon for footer display in orange and grey" src="https://lh3.googleusercontent.com/aida/ADBb0uia_bNZnQuftY2q7IvDjLKiWufDK-V63964fDcjtbgXfwafMdukaqMMjorRzFdeAuvXPQfJN55xPZ485meQ_gckGT9pu_IwxLOGjo9ZwDtKLEitJe9QUDURSGrp0RTYk0xN0MtNesEH4zuCaoPqajzNIL_CA531qHU3JvUDpGqVmhr-i2WQQoa2xlt3AGl6M6ETl5srw2nv-l3lbMad8Tv64cNacqFQtEIt_5hmVVhZ-_JUQQPF5jbIwKqlirzghVyv3GK9UzD6ULw"/>
 </div>
-<p class="font-manrope text-xs leading-relaxed text-stone-500">Expertos en facilitar el comercio exterior con soluciones innovadoras y seguras para su carga.</p>
-</div>
-<div>
-<h5 class="text-white text-sm font-bold mb-6 tracking-widest uppercase">Enlaces</h5>
-<ul class="space-y-4 font-manrope text-xs leading-relaxed">
-<li><a class="text-stone-500 hover:text-orange-400 hover:translate-x-1 transition-transform inline-block" href="#">Privacidad</a></li>
-<li><a class="text-stone-500 hover:text-orange-400 hover:translate-x-1 transition-transform inline-block" href="#">Términos de Servicio</a></li>
-<li><a class="text-stone-500 hover:text-orange-400 hover:translate-x-1 transition-transform inline-block" href="#">Estatus de Carga</a></li>
-</ul>
+<p class="font-manrope text-xs leading-relaxed text-zinc-500 font-medium">Expertos en facilitar el comercio exterior con soluciones innovadoras y seguras para su carga.</p>
 </div>
 <div>
-<h5 class="text-white text-sm font-bold mb-6 tracking-widest uppercase">Ubicaciones</h5>
-<ul class="space-y-4 font-manrope text-xs leading-relaxed text-stone-500">
-<li>Caracas, Venezuela</li>
-<li>La Guaira, Venezuela</li>
-<li>Puerto Cabello, Venezuela</li>
-<li>Valencia, Venezuela</li>
-</ul>
+<h5 class="text-zinc-900 text-sm font-bold mb-6 tracking-widest uppercase">Enlaces</h5>
+<ul class="space-y-4 font-manrope text-xs leading-relaxed"><li>San Antonio del Táchira, Venezuela</li><li>Puerto Cabello, Venezuela</li></ul>
 </div>
 <div>
-<h5 class="text-white text-sm font-bold mb-6 tracking-widest uppercase">Contacto</h5>
-<p class="font-manrope text-xs leading-relaxed text-stone-500 mb-4">Conectamos su negocio con el mundo.</p>
-<div class="flex gap-4">
-<a class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center hover:bg-primary-container transition-colors" href="mailto:gerencia@ameriva.com.ve">
-<span class="material-symbols-outlined text-sm">mail</span>
+<h5 class="text-zinc-900 text-sm font-bold mb-6 tracking-widest uppercase">Ubicaciones</h5>
+<ul class="space-y-4 font-manrope text-xs leading-relaxed text-zinc-500 font-medium"><li>San Antonio del Táchira, Venezuela</li><li>Puerto Cabello, Venezuela</li></ul>
+</div>
+<div>
+<h5 class="text-zinc-900 text-sm font-bold mb-6 tracking-widest uppercase">Contacto</h5>
+<p class="font-manrope text-xs leading-relaxed text-zinc-500 mb-6 font-medium">Conectamos su negocio con el mundo.</p>
+<div class="flex flex-col gap-4">
+<a class="flex items-center gap-3 text-zinc-500 hover:text-primary-container transition-colors group" href="mailto:gerencia@ameriva.com.ve">
+<span class="w-8 h-8 rounded bg-zinc-100 flex items-center justify-center group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm text-zinc-600 group-hover:text-white">mail</span>
+</span>
+<span class="font-manrope text-xs font-bold text-zinc-700">gerencia@ameriva.com.ve</span>
 </a>
-<a class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center hover:bg-primary-container transition-colors" href="tel:+584244176230">
-<span class="material-symbols-outlined text-sm">call</span>
+<a class="flex items-center gap-3 text-zinc-500 hover:text-green-600 transition-colors group" href="https://wa.me/584244176230">
+<span class="w-8 h-8 rounded bg-zinc-100 flex items-center justify-center group-hover:bg-green-600 transition-colors">
+<svg class="w-4 h-4 fill-zinc-600 group-hover:fill-white" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.437 5.63 1.438h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+</span>
+<span class="font-manrope text-xs font-bold text-zinc-700">+58 424-4176230</span>
 </a>
 </div>
 </div>
 </div>
-<div class="px-12 py-8 border-t border-stone-900 text-center">
-<p class="font-manrope text-xs leading-relaxed text-stone-500">© 2024 Ameriva. Vanguardia en Logística Aduanera. Sedes en Caracas, La Guaira, Puerto Cabello y Valencia, Venezuela.</p>
+<div class="px-12 py-8 border-t border-zinc-100 text-center">
+<p class="font-manrope text-xs leading-relaxed text-zinc-400 font-medium">© 2024 Ameriva. Vanguardia en Logística Aduanera. Sedes en Caracas, La Guaira, Puerto Cabello y Valencia, Venezuela.</p>
 </div>
 </footer>
-      
-<a href="https://wa.me/584244176230"
-class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg z-50 hover:scale-110 transition">
-💬
-</a></body></html>
+</body></html>
