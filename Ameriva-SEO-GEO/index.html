@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO BASICO -->
+  <title>Agencia de Aduanas en Venezuela | Importaciones, Exportaciones y Nacionalización | Ameriva</title>
+  <meta name="description" content="Ameriva es una agencia de aduanas y agente de carga en Venezuela especializada en importaciones, exportaciones, nacionalización de mercancía, trámites aduaneros y logística en Puerto Cabello y San Antonio del Táchira." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Ameriva" />
+  <meta name="theme-color" content="#f16b1b" />
+  <link rel="canonical" href="https://ameriva.com.ve/" />
+
+  <!-- FAVICON / APP -->
+  <link rel="icon" href="./assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+  <link rel="manifest" href="./assets/manifest.json" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:locale" content="es_VE" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Agencia de Aduanas en Venezuela | Ameriva" />
+  <meta property="og:description" content="Importaciones, exportaciones, nacionalización de mercancía y trámites aduaneros en Puerto Cabello y San Antonio del Táchira." />
+  <meta property="og:url" content="https://ameriva.com.ve/" />
+  <meta property="og:site_name" content="Ameriva" />
+  <meta property="og:image" content="https://ameriva.com.ve/og-ameriva.jpg" />
+  <meta property="og:image:alt" content="Ameriva agencia de aduanas en Venezuela" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Agencia de Aduanas en Venezuela | Ameriva" />
+  <meta name="twitter:description" content="Servicios de importación, exportación, nacionalización de mercancía y logística aduanera en Venezuela." />
+  <meta name="twitter:image" content="https://ameriva.com.ve/og-ameriva.jpg" />
+
+  <!-- PERFORMANCE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://lh3.googleusercontent.com" />
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
+
+  <!-- FUENTES -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- TAILWIND CDN: funciona, pero para producción idealmente compilar CSS local -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-container": "#009beb",
+            "surface-container": "#201f1f",
+            "background": "#131313",
+            "outline": "#a88b7e",
+            "on-surface-variant": "#e0c0b2",
+            "primary-fixed": "#ffdbcc",
+            "on-secondary-container": "#a9bad3",
+            "surface-container-low": "#1c1b1b",
+            "secondary": "#b7c8e1",
+            "surface-dim": "#131313",
+            "on-error-container": "#ffdad6",
+            "tertiary": "#94ccff",
+            "on-primary": "#561f00",
+            "on-primary-fixed": "#351000",
+            "inverse-on-surface": "#313030",
+            "on-surface": "#e5e2e1",
+            "secondary-fixed": "#d3e4fe",
+            "error": "#ffb4ab",
+            "primary": "#ffb694",
+            "secondary-fixed-dim": "#b7c8e1",
+            "secondary-container": "#3a4a5f",
+            "on-secondary-fixed": "#0b1c30",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-container-high": "#2a2a2a",
+            "surface-container-highest": "#353534",
+            "outline-variant": "#584237",
+            "surface-bright": "#3a3939",
+            "inverse-surface": "#e5e2e1",
+            "primary-container": "#f16b1b",
+            "on-background": "#e5e2e1"
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem"
+          },
+          fontFamily: {
+            headline: ["Manrope"],
+            body: ["Manrope"],
+            label: ["Manrope"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Manrope', sans-serif; }
+    html { scroll-behavior: smooth; }
+    .glass-panel { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    .hero-gradient { background: linear-gradient(to bottom, rgba(14, 14, 14, 0.4), rgba(19, 19, 19, 1)); }
+    .text-glow { text-shadow: 0 0 20px rgba(241, 107, 27, 0.3); }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    .card-image-bg { background-size: cover; background-position: center; position: relative; }
+    .card-image-bg::before { content: ""; position: absolute; inset: 0; background: rgba(19, 19, 19, 0.85); transition: background 0.3s ease; }
+    .card-image-bg:hover::before { background: rgba(19, 19, 19, 0.75); }
+    :focus-visible { outline: 3px solid #f16b1b; outline-offset: 4px; }
+  </style>
+
+  <!-- STRUCTURED DATA: ORGANIZATION -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ameriva",
+    "url": "https://ameriva.com.ve/",
+    "logo": "https://ameriva.com.ve/logo.png",
+    "description": "Agencia de aduanas y agente de carga en Venezuela especializada en importaciones, exportaciones, nacionalización de mercancía, trámites aduaneros y logística aduanera.",
+    "email": "gerencia@ameriva.com.ve",
+    "telephone": "+584244176230",
+    "sameAs": [
+      "https://instagram.com/Ameriva.ca"
+    ],
+    "areaServed": [
+      { "@type": "Place", "name": "Puerto Cabello, Venezuela" },
+      { "@type": "Place", "name": "San Antonio del Táchira, Venezuela" },
+      { "@type": "Country", "name": "Venezuela" }
+    ],
+    "knowsAbout": [
+      "Agencia de aduanas",
+      "Agente aduanal",
+      "Importaciones",
+      "Exportaciones",
+      "Nacionalización de mercancía",
+      "Trámites aduaneros",
+      "Despacho aduanero",
+      "Logística aduanera",
+      "Comercio exterior",
+      "Agente de carga"
+    ]
+  }
+  </script>
+
+  <!-- STRUCTURED DATA: WEBSITE -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ameriva",
+    "url": "https://ameriva.com.ve/"
+  }
+  </script>
+
+  <!-- STRUCTURED DATA: WEBPAGE -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Agencia de Aduanas en Venezuela | Ameriva",
+    "url": "https://ameriva.com.ve/",
+    "description": "Ameriva ofrece servicios de agencia de aduanas, agente de carga, importaciones, exportaciones, nacionalización de mercancía y logística aduanera en Venezuela.",
+    "inLanguage": "es-VE",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Ameriva",
+      "url": "https://ameriva.com.ve/"
+    }
+  }
+  </script>
+
+  <!-- STRUCTURED DATA: SERVICE -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Servicios de agencia de aduanas en Venezuela",
+    "provider": {
+      "@type": "Organization",
+      "name": "Ameriva",
+      "url": "https://ameriva.com.ve/"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Venezuela"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios aduaneros y logísticos",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Importaciones en Venezuela" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Exportaciones desde Venezuela" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Nacionalización de mercancía" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Trámites aduaneros" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Agente de carga" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Logística aduanera" }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- STRUCTURED DATA: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Ameriva es una agencia de aduanas en Venezuela?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Ameriva ofrece servicios de agencia de aduanas, agente de carga, importaciones, exportaciones, nacionalización de mercancía, trámites aduaneros y logística aduanera en Venezuela."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Dónde presta servicios Ameriva?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ameriva opera estratégicamente en Puerto Cabello y San Antonio del Táchira, dos zonas clave para operaciones marítimas, terrestres y fronterizas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es la nacionalización de mercancía?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La nacionalización de mercancía es el proceso mediante el cual una carga importada cumple requisitos aduaneros, fiscales y documentales para ingresar legalmente al mercado venezolano."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Ameriva ayuda con importaciones y exportaciones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Ameriva brinda asesoría y coordinación para operaciones de importación y exportación, incluyendo revisión documental, seguimiento aduanero y logística."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo solicitar una cotización por WhatsApp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Puede contactar a Ameriva por WhatsApp para explicar su operación, tipo de mercancía, origen, destino y documentación disponible."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-white">
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[999] focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded">
+    Saltar al contenido
+  </a>
+
+  <!-- TOP NAV -->
+  <nav class="fixed top-0 w-full z-50 shadow-2xl shadow-black/40 flex justify-between items-center px-6 md:px-12 h-20 bg-white" aria-label="Navegación principal">
+    <div class="flex items-center gap-4">
+      <a href="/" aria-label="Inicio Ameriva">
+        <img
+          alt="Ameriva agencia de aduanas en Venezuela"
+          class="w-auto h-12 object-contain"
+          width="180"
+          height="48"
+          src="./assets/logo.png"
+        />
+      </a>
+    </div>
+
+    <div class="hidden md:flex items-center space-x-10 font-manrope text-sm font-medium tracking-wide uppercase">
+      <a class="text-orange-500 border-b-2 border-orange-600 pb-1" href="/">Inicio</a>
+      <a class="transition-colors text-stone-600 hover:text-stone-950" href="#servicios">Servicios</a>
+      <a class="transition-colors text-stone-600 hover:text-stone-950" href="#sedes">Sedes</a>
+      <a class="transition-colors text-stone-600 hover:text-stone-950" href="#faq">FAQ</a>
+      <a class="transition-colors text-stone-600 hover:text-stone-950" href="#contacto">Contacto</a>
+    </div>
+
+    <div class="flex items-center gap-3 md:gap-6">
+      <a class="font-manrope text-xs md:text-sm font-medium tracking-wide uppercase text-orange-600 hover:bg-orange-600/10 hover:scale-105 transition-all duration-300 px-3 md:px-4 py-2 rounded flex items-center justify-center" href="https://wa.me/584244176230?text=Hola%20Ameriva%2C%20necesito%20asesor%C3%ADa%20para%20un%20tr%C3%A1mite%20aduanero%20o%20nacionalizaci%C3%B3n%20de%20mercanc%C3%ADa." target="_blank" rel="noopener">
+        WhatsApp
+      </a>
+      <a class="hidden sm:flex font-manrope text-sm font-medium tracking-wide uppercase border hover:scale-105 transition-all duration-300 px-4 py-2 rounded items-center justify-center text-stone-800 border-stone-200 hover:bg-stone-50" href="mailto:gerencia@ameriva.com.ve">
+        Email
+      </a>
+    </div>
+  </nav>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover"
+          alt="Agencia de aduanas en Venezuela para importaciones y exportaciones"
+          fetchpriority="high"
+          width="1920"
+          height="1080"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_7Wb8aLuWW4jnbhaEejudbNA5SJ72q9vyyIERHvwyPH35K1mST1OgHu_YyTcbi_C1UtofDM1texTk8OdED1IwUdZaSinJNk9nFQDSTCCjs1-CeerIDIra3yD_azdCtkRA_PDVkJzBX8fCsoMtGhBd2k3xuk1PxXvO6fiTflU4qq3pquuPkSfxbZbjBlSyX9mdZvfKA05M6t6iJggKbLNvYNQ2YDNUGnN9fiPTgyQXFXVdxxkxwl_QPXTMB_0EDvKVeY5tY3769gqo"
+        />
+        <div class="absolute inset-0 hero-gradient"></div>
+      </div>
+
+      <div class="relative z-10 px-6 md:px-12 max-w-7xl mx-auto w-full">
+        <div class="w-full">
+          <p class="text-primary-container font-bold text-xs uppercase tracking-[0.35em] mb-4">Agencia de aduanas y agente de carga</p>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter leading-[1.1] mb-8">
+            Agencia de Aduanas en Venezuela para <span class="text-primary-container">Importaciones, Exportaciones y Nacionalización</span>
+          </h1>
+          <p class="text-stone-300 text-lg md:text-xl font-medium mt-6 max-w-5xl leading-relaxed">
+            Ameriva es una agencia de aduanas y agente de carga en Venezuela especializada en trámites aduaneros, importaciones, exportaciones, nacionalización de mercancía y soluciones logísticas para empresas.
+          </p>
+          <p class="text-stone-400 text-base md:text-lg font-medium mt-6 max-w-5xl leading-relaxed">
+            Operamos estratégicamente en Puerto Cabello y San Antonio del Táchira, acompañando a importadores, exportadores y empresas de comercio exterior en documentación, coordinación aduanera, seguimiento de carga, despacho, transporte y entrega final.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-12">
+            <a class="bg-primary-container text-white font-bold py-4 px-8 rounded-md flex items-center gap-3 hover:translate-y-[-4px] transition-all shadow-xl shadow-primary-container/20" href="https://wa.me/584244176230?text=Hola%20Ameriva%2C%20necesito%20asesor%C3%ADa%20para%20un%20tr%C3%A1mite%20aduanero%20o%20nacionalizaci%C3%B3n%20de%20mercanc%C3%ADa." target="_blank" rel="noopener">
+              <span class="material-symbols-outlined" aria-hidden="true">message</span>
+              Solicitar asesoría aduanera
+            </a>
+            <a class="bg-surface-container-highest/40 backdrop-blur-md border border-outline-variant/30 text-white font-bold py-4 px-8 rounded-md hover:bg-white/10 transition-all flex items-center justify-center" href="mailto:gerencia@ameriva.com.ve?subject=Solicitud%20de%20cotizaci%C3%B3n%20aduanera">
+              Cotizar nacionalización de mercancía
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-12 left-0 w-full px-6 md:px-12" aria-hidden="true">
+        <div class="max-w-7xl mx-auto flex items-center gap-1">
+          <div class="h-1 flex-1 bg-primary-container rounded-full"></div>
+          <div class="h-1 flex-1 bg-primary-container rounded-full"></div>
+          <div class="h-1 flex-1 bg-primary-container/30 rounded-full"></div>
+          <div class="h-1 flex-1 bg-primary-container/10 rounded-full"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE AMERIVA / GEO -->
+    <section class="py-20 px-6 md:px-12 bg-surface-container-lowest">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+        <div>
+          <p class="text-primary-container font-bold text-xs uppercase tracking-[0.3em] mb-3">Sobre Ameriva</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold tracking-tighter text-white">Logística aduanera para empresas en Venezuela</h2>
+        </div>
+        <div class="lg:col-span-2 space-y-5 text-stone-400 text-lg leading-relaxed">
+          <p>
+            Ameriva es una agencia de aduanas y agente de carga en Venezuela con operaciones en Puerto Cabello y San Antonio del Táchira. La empresa brinda servicios de importación, exportación, nacionalización de mercancía, trámites aduaneros, gestión documental, coordinación logística y asesoría en comercio exterior para empresas importadoras y exportadoras.
+          </p>
+          <p>
+            Nuestro objetivo es ayudarle a reducir demoras, evitar errores documentales y gestionar su carga con seguridad, rapidez y cumplimiento normativo durante cada etapa del proceso aduanero y logístico.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INNOVACION -->
+    <section class="py-24 px-6 md:px-12 bg-surface-container-lowest">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-16">
+          <p class="text-primary-container font-bold text-xs uppercase tracking-[0.3em] mb-2">Innovación</p>
+          <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-white">Control, seguimiento y gestión documental</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="md:col-span-2 bg-surface-container-low p-10 rounded-xl relative overflow-hidden group">
+            <div class="relative z-10">
+              <span class="material-symbols-outlined text-primary-container text-4xl mb-6" aria-hidden="true">location_searching</span>
+              <h3 class="text-2xl font-bold mb-4">Rastreo y seguimiento de operaciones</h3>
+              <p class="text-stone-400 max-w-md leading-relaxed">
+                Acompañamos el proceso logístico con visibilidad sobre el avance de la carga, documentación y coordinación aduanera.
+              </p>
+            </div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 rounded-full blur-3xl -mr-20 -mt-20"></div>
+          </div>
+
+          <div class="bg-surface-container-high p-10 rounded-xl hover:translate-y-[-8px] transition-transform duration-500">
+            <span class="material-symbols-outlined text-primary-container text-4xl mb-6" aria-hidden="true">verified_user</span>
+            <h3 class="text-xl font-bold mb-4">Gestión segura de información</h3>
+            <p class="text-stone-400 text-sm leading-relaxed">
+              Manejo responsable de documentación comercial, datos de carga y soportes necesarios para operaciones de comercio exterior.
+            </p>
+          </div>
+
+          <div class="bg-surface-container-high p-10 rounded-xl hover:translate-y-[-8px] transition-transform duration-500">
+            <span class="material-symbols-outlined text-primary-container text-4xl mb-6" aria-hidden="true">description</span>
+            <h3 class="text-xl font-bold mb-4">Gestión documental aduanera</h3>
+            <p class="text-stone-400 text-sm leading-relaxed">
+              Revisión y organización de documentos para importaciones, exportaciones, nacionalización de mercancía y trámites aduaneros.
+            </p>
+          </div>
+
+          <div class="md:col-span-2 bg-primary-container p-10 rounded-xl flex items-center justify-between group overflow-hidden">
+            <div class="max-w-md">
+              <h3 class="text-2xl font-black text-white mb-4 italic">EXPANDA SU OPERACIÓN COMERCIAL</h3>
+              <p class="text-white/85 font-medium">
+                Simplificamos la complejidad aduanera para que su empresa pueda importar, exportar y movilizar mercancía con mayor control.
+              </p>
+            </div>
+            <span class="material-symbols-outlined text-8xl text-white/20 -mr-4 group-hover:scale-110 transition-transform" aria-hidden="true">rocket_launch</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="bg-background relative overflow-hidden pt-32" id="servicios">
+      <div class="px-6 md:px-12 max-w-7xl mx-auto relative z-10">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+          <div class="max-w-3xl">
+            <p class="text-primary-container font-bold text-xs uppercase tracking-[0.3em] mb-4">Servicios</p>
+            <h2 class="text-4xl md:text-6xl font-extrabold tracking-tighter mb-6 text-white">Servicios de aduanas, carga y comercio exterior</h2>
+            <p class="text-stone-400 text-lg leading-relaxed">
+              En Ameriva gestionamos soluciones integrales para empresas que importan, exportan o movilizan mercancía dentro y fuera de Venezuela. Nuestro equipo brinda asesoría técnica, gestión documental y coordinación logística para que cada operación avance de forma segura y eficiente.
+            </p>
+          </div>
+          <div class="text-right">
+            <p class="text-primary-container font-black text-6xl opacity-10">06</p>
+            <p class="text-xs font-bold uppercase tracking-widest text-stone-600">Servicios clave</p>
+          </div>
+        </div>
+
+        <div class="w-full py-6 px-8 bg-surface-container-low rounded-xl mb-12 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm md:text-base font-bold text-primary-container uppercase tracking-wider border border-primary-container/10">
+          <span>✔ Importaciones</span>
+          <span>✔ Exportaciones</span>
+          <span>✔ Nacionalización de mercancía</span>
+          <span>✔ Trámites aduaneros</span>
+          <span>✔ Agente de carga</span>
+          <span>✔ Logística aduanera</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-outline-variant/10">
+          <article class="bg-background p-12 hover:bg-surface-container-low transition-colors duration-300">
+            <span class="material-symbols-outlined text-primary-container text-3xl mb-8" aria-hidden="true">gavel</span>
+            <h3 class="text-xl font-bold mb-4">Importaciones en Venezuela</h3>
+            <p class="text-stone-500 text-sm leading-relaxed">
+              Gestionamos el proceso de importación de mercancías, desde la revisión documental hasta la coordinación aduanera y logística. Acompañamos a empresas que necesitan ingresar productos al país cumpliendo con los requisitos aplicables.
+            </p>
+          </article>
+
+          <article class="bg-background p-12 hover:bg-surface-container-low transition-colors duration-300">
+            <span class="material-symbols-outlined text-primary-container text-3xl mb-8" aria-hidden="true">directions_boat</span>
+            <h3 class="text-xl font-bold mb-4">Exportaciones desde Venezuela</h3>
+            <p class="text-stone-500 text-sm leading-relaxed">
+              Asesoramos y coordinamos operaciones de exportación para empresas que desean llevar sus productos a mercados internacionales, cuidando documentación, tiempos y cumplimiento del proceso.
+            </p>
+          </article>
+
+          <article class="bg-background p-12 hover:bg-surface-container-low transition-colors duration-300">
+            <span class="material-symbols-outlined text-primary-container text-3xl mb-8" aria-hidden="true">inventory_2</span>
+            <h3 class="text-xl font-bold mb-4">Nacionalización de mercancía</h3>
+            <p class="text-stone-500 text-sm leading-relaxed">
+              Apoyamos la nacionalización de mercancía importada en Venezuela mediante gestión documental, seguimiento del trámite aduanero y coordinación con los actores logísticos involucrados.
+            </p>
+          </article>
+
+          <article class="bg-background p-12 hover:bg-surface-container-low transition-colors duration-300">
+            <span class="material-symbols-outlined text-primary-container text-3xl mb-8" aria-hidden="true">analytics</span>
+            <h3 class="text-xl font-bold mb-4">Trámites aduaneros</h3>
+            <p class="text-stone-500 text-sm leading-relaxed">
+              Realizamos acompañamiento en trámites aduaneros, revisión de requisitos, clasificación documental, seguimiento de operaciones y soporte durante el proceso de despacho.
+            </p>
+          </article>
+
+          <article class="bg-background p-12 hover:bg-surface-container-low transition-colors duration-300">
+            <span class="material-symbols-outlined text-primary-container text-3xl mb-8" aria-hidden="true">local_shipping</span>
+            <h3 class="text-xl font-bold mb-4">Agente de carga</h3>
+            <p class="text-stone-500 text-sm leading-relaxed">
+              Coordinamos soluciones de carga para empresas que requieren mover mercancía de forma segura, con seguimiento, comunicación y soporte durante el proceso logístico.
+            </p>
+          </article>
+
+          <article class="bg-background p-12 hover:bg-surface-container-low transition-colors duration-300">
+            <span class="material-symbols-outlined text-primary-container text-3xl mb-8" aria-hidden="true">precision_manufacturing</span>
+            <h3 class="text-xl font-bold mb-4">Proyectos especiales</h3>
+            <p class="text-stone-500 text-sm leading-relaxed">
+              Manejo de operaciones logísticas de mayor complejidad, carga especial, coordinación técnica y acompañamiento para sectores industriales y comerciales.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div aria-hidden="true" class="h-32 w-full bg-gradient-to-b from-background to-[#F5F5F0]"></div>
+
+    <!-- SEDES -->
+    <section class="bg-[#F5F5F0] pb-32" id="sedes">
+      <div class="px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div>
+            <p class="text-primary-container font-bold text-xs uppercase tracking-[0.3em] mb-4">Presencia estratégica</p>
+            <h2 class="text-5xl font-extrabold tracking-tighter mb-8 text-zinc-900">Agencia de aduanas en Puerto Cabello y San Antonio del Táchira</h2>
+            <p class="text-zinc-600 text-lg leading-relaxed mb-12">
+              Ameriva cuenta con presencia estratégica en dos puntos clave para el comercio exterior venezolano: Puerto Cabello y San Antonio del Táchira.
+            </p>
+
+            <div class="space-y-8 mb-12">
+              <article class="flex gap-6 group card-image-bg p-8 rounded-xl bg-[url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800')] overflow-hidden">
+                <div class="w-1 bg-primary-container group-hover:w-2 transition-all relative z-10"></div>
+                <div class="relative z-10">
+                  <h3 class="text-2xl font-bold mb-3 text-white">San Antonio del Táchira</h3>
+                  <p class="text-stone-300 leading-relaxed">
+                    Punto estratégico para operaciones fronterizas, comercio binacional, carga terrestre y trámites aduaneros vinculados al intercambio comercial entre Colombia y Venezuela.
+                  </p>
+                </div>
+              </article>
+
+              <article class="flex gap-6 group card-image-bg p-8 rounded-xl bg-[url('https://images.unsplash.com/photo-1494412574743-019485b78287?auto=format&fit=crop&q=80&w=800')] overflow-hidden">
+                <div class="w-1 bg-zinc-700 group-hover:bg-primary-container group-hover:w-2 transition-all relative z-10"></div>
+                <div class="relative z-10">
+                  <h3 class="text-2xl font-bold mb-3 text-white">Puerto Cabello</h3>
+                  <p class="text-stone-300 leading-relaxed">
+                    Apoyamos operaciones marítimas, nacionalización de mercancía, despacho aduanero y coordinación logística para importadores, exportadores y empresas.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="relative h-[600px] bg-white rounded-sm overflow-hidden shadow-2xl border border-zinc-200">
+            <div class="absolute inset-0 grayscale opacity-80">
+              <img
+                class="w-full h-full object-cover"
+                alt="Mapa de operaciones aduaneras de Ameriva en Venezuela"
+                width="900"
+                height="1200"
+                loading="lazy"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAETbb9Tld8Fdnfblw4LVeX4hpleGPqSuLuhjkk7uh8KR49OKli_LePrGtQI_3FJRdpKtgxIovhIG50FnwOuCTMm9V-RN3WOSunrShzX78sb4C5YYs65qpn_UMtfrdfH8ZXtGczApUIeTW_eSRQN63b2y9crw1SrrQLQquo6UFRHh7pMCEmgQlF_RFHtiz7vJSwoglF7EtlAMR7GbuPITX2_hzdqfqbLSVJ34taNLInd_ImhZx1Cz97GSZVxgAEEZpIwitzOAJ7lEe6"
+              />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-tr from-[#F5F5F0] to-transparent"></div>
+            <div class="absolute bottom-8 left-8 right-8 p-6 glass-panel bg-white/80 border border-zinc-200 rounded">
+              <p class="text-xs font-bold text-primary-container tracking-widest uppercase mb-1">Estatus operativo</p>
+              <p class="text-sm text-zinc-700 font-medium">
+                Atención para operaciones de importación, exportación, nacionalización de mercancía y logística aduanera en Venezuela.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="py-24 px-6 md:px-12 bg-white" id="galeria">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12">
+          <p class="text-primary-container font-bold text-xs uppercase tracking-[0.3em] mb-2">Registro visual</p>
+          <h2 class="text-4xl font-extrabold tracking-tighter text-zinc-900">Operaciones aduaneras y logísticas</h2>
+          <p class="text-zinc-600 mt-4 max-w-3xl">
+            Coordinación de carga, inspección de mercancía, gestión documental y soporte para procesos de comercio exterior.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] group border border-zinc-200/50 transition-transform duration-500 hover:scale-[1.02]">
+            <img
+              alt="Operaciones portuarias para importaciones en Venezuela"
+              class="w-full h-full object-cover"
+              width="600"
+              height="800"
+              loading="lazy"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuANQTnPQMUe7YqzLkTEGWjcniBzrGWtN4gploaBFmoWe-R_ydywksxEH5MlcR6eZTZIF57OYQoQFpdC5plEQP1zHVWjWdKXQe2rsBzGsLMZUcqpW-lAsruqh9SGySkrKAeZ-xLy946CbE9IVMghKulVtm5Lkfk_7BShaReG72TrujQOZr78vfZkdV68GH4W_j-QZ9wHX-YHERcNs6FIcfUMYYVM0l-OGU9-VaVmpyw570RCCxIEMNa0pal06IAxTQx3bl-AaKG938aO"
+            />
+          </div>
+          <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] group border border-zinc-200/50 transition-transform duration-500 hover:scale-[1.02]">
+            <img
+              alt="Inspección de carga y documentación aduanera"
+              class="w-full h-full object-cover"
+              width="600"
+              height="800"
+              loading="lazy"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrd42AhI6ulhL61nyrj0H58NoLz4jZb--UTt3-5g_Ij1G6n0IHYYYXHoMK7eFlfFo5jQcV_UzynSN58sffGf7LtLksPPJH3UVtpkxJyMCFHj92Du3a6u7n0oMLzuEW1soS7ChB5wYmRb5BZJgUjlfJWvMFxZyifIXzRYxP7C0S6OhpwHNoxauepxg001GvmohN1SzhN_r3CyAsz42JgbOLVIqfJ8iQL5AM548PAE05msMajSsrx_xsH33H7RlKb8-LkBPRV1MpEvkx"
+            />
+          </div>
+          <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] group border border-zinc-200/50 transition-transform duration-500 hover:scale-[1.02]">
+            <img
+              alt="Nacionalización de mercancía en puerto venezolano"
+              class="w-full h-full object-cover"
+              width="600"
+              height="800"
+              loading="lazy"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLtaemsHal0AIrjLn5bndHb74KDHM-NKDuFfpIwL0KkfLCzU2u4L64zIKE_yhzp-zwMpPdMDOZ0QrQThfqDGjkGmHhKI_PuUZ3d9-V4SvM769tnf_dE7k5qKc5taYJV9ZOpUiMtGWnMyKy3GLwfGZrXfJSs6MeeY1H8zIjT-UUfTFk77BqJN2bC4N2vaV2M84BaRTlFlljNPTigUhma5RZSMLdnK8ZC0ZMtybNgkq4iTHfWUl5FEXt1aT7uWJUTfzcFMPyZBlC2iOR"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 px-6 md:px-12 bg-[#F5F5F0]" id="faq">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-primary-container font-bold text-xs uppercase tracking-[0.3em] mb-4">Preguntas frecuentes</p>
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-zinc-900 mb-12">FAQ </h2>
+
+        <div class="space-y-5">
+          <details class="bg-white border border-zinc-200 rounded-xl p-6">
+            <summary class="cursor-pointer font-bold text-zinc-900 text-lg">¿Ameriva es una agencia de aduanas en Venezuela?</summary>
+            <p class="text-zinc-600 mt-4 leading-relaxed">Sí. Ameriva ofrece servicios de agencia de aduanas, agente de carga, importaciones, exportaciones, nacionalización de mercancía, trámites aduaneros y logística aduanera en Venezuela.</p>
+          </details>
+
+          <details class="bg-white border border-zinc-200 rounded-xl p-6">
+            <summary class="cursor-pointer font-bold text-zinc-900 text-lg">¿Dónde presta servicios Ameriva?</summary>
+            <p class="text-zinc-600 mt-4 leading-relaxed">Ameriva opera estratégicamente en Puerto Cabello y San Antonio del Táchira, dos zonas clave para operaciones marítimas, terrestres y fronterizas.</p>
+          </details>
+
+          <details class="bg-white border border-zinc-200 rounded-xl p-6">
+            <summary class="cursor-pointer font-bold text-zinc-900 text-lg">¿Qué es la nacionalización de mercancía?</summary>
+            <p class="text-zinc-600 mt-4 leading-relaxed">Es el proceso mediante el cual una mercancía importada cumple requisitos aduaneros, fiscales y documentales para poder ingresar legalmente al mercado venezolano.</p>
+          </details>
+
+          <details class="bg-white border border-zinc-200 rounded-xl p-6">
+            <summary class="cursor-pointer font-bold text-zinc-900 text-lg">¿Qué documentos se necesitan para importar mercancía en Venezuela?</summary>
+            <p class="text-zinc-600 mt-4 leading-relaxed">Depende del tipo de mercancía, pero normalmente pueden solicitarse factura comercial, documento de transporte, lista de empaque, permisos, registros, clasificación arancelaria y documentación del importador.</p>
+          </details>
+
+          <details class="bg-white border border-zinc-200 rounded-xl p-6">
+            <summary class="cursor-pointer font-bold text-zinc-900 text-lg">¿Ameriva ayuda con operaciones entre Colombia y Venezuela?</summary>
+            <p class="text-zinc-600 mt-4 leading-relaxed">Sí. Ameriva puede orientar operaciones de carga terrestre y logística fronteriza relacionadas con el comercio entre Colombia y Venezuela, especialmente desde la zona de San Antonio del Táchira.</p>
+          </details>
+
+          <details class="bg-white border border-zinc-200 rounded-xl p-6">
+            <summary class="cursor-pointer font-bold text-zinc-900 text-lg">¿Puedo solicitar una cotización por WhatsApp?</summary>
+            <p class="text-zinc-600 mt-4 leading-relaxed">Sí. Puede contactar al equipo de Ameriva por WhatsApp para explicar su operación, tipo de mercancía, origen, destino y documentación disponible.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 px-6 md:px-12 bg-surface-container-lowest relative overflow-hidden text-center" id="contacto">
+      <div class="absolute inset-0 opacity-10" aria-hidden="true">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-container/20 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="max-w-5xl mx-auto relative z-10">
+        <p class="text-primary-container font-bold text-xs uppercase tracking-[0.5em] mb-6">Impulsa tu carga</p>
+        <h2 class="text-5xl md:text-7xl font-black tracking-tighter mb-10 leading-[1.05] text-white">¿Necesita importar, exportar o nacionalizar mercancía en Venezuela?</h2>
+        <p class="text-stone-400 text-xl md:text-2xl mb-16 max-w-3xl mx-auto font-light leading-relaxed">
+          Converse con nuestro equipo y reciba orientación para su operación aduanera. Le ayudamos a revisar su caso, identificar los documentos necesarios y coordinar el proceso logístico de forma segura y eficiente.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-8">
+          <a class="w-full sm:w-auto bg-primary-container text-white font-black px-12 py-6 rounded-md hover:scale-105 transition-all flex items-center justify-center gap-4 shadow-[0_0_50px_-12px_rgba(241,107,27,0.5)]" href="https://wa.me/584244176230?text=Hola%20Ameriva%2C%20necesito%20asesor%C3%ADa%20para%20un%20tr%C3%A1mite%20aduanero%20o%20nacionalizaci%C3%B3n%20de%20mercanc%C3%ADa." target="_blank" rel="noopener">
+            <span class="material-symbols-outlined" aria-hidden="true">chat_bubble</span>
+            Asesoría por WhatsApp
+          </a>
+          <a class="w-full sm:w-auto border-2 border-white/20 text-white font-bold px-12 py-6 rounded-md hover:bg-white hover:text-black transition-all backdrop-blur-sm" href="mailto:gerencia@ameriva.com.ve?subject=Solicitud%20de%20cotizaci%C3%B3n%20aduanera">
+            Solicitar cotización
+          </a>
+          <a class="w-full sm:w-auto text-white/60 hover:text-pink-500 font-bold px-6 py-6 transition-colors flex items-center justify-center gap-3" href="https://instagram.com/Ameriva.ca" target="_blank" rel="noopener">
+            Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div aria-hidden="true" class="h-32 w-full bg-gradient-to-b from-[#F5F5F0] to-white"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white w-full border-t border-zinc-100">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-16 px-6 md:px-12 mx-auto max-w-[1440px] py-32">
+      <div class="md:col-span-3 flex flex-col gap-10">
+        <div class="mb-4">
+          <img
+            alt="Ameriva agencia de aduanas y logística aduanera en Venezuela"
+            class="w-auto h-24 object-contain"
+            width="240"
+            height="96"
+            loading="lazy"
+            src="./assets/logo.png"
+          />
+        </div>
+        <p class="font-manrope text-lg leading-relaxed text-zinc-500 font-medium max-w-md">
+          Agencia de aduanas en Venezuela especializada en importaciones, exportaciones, nacionalización de mercancía, trámites aduaneros y logística aduanera.
+        </p>
+      </div>
+
+      <div class="md:col-span-2">
+        <h2 class="text-zinc-900 text-lg font-bold mb-10 tracking-widest uppercase">Explorar</h2>
+        <ul class="space-y-6 font-manrope text-base text-zinc-600">
+          <li><a class="hover:text-primary-container transition-colors" href="/">Inicio</a></li>
+          <li><a class="hover:text-primary-container transition-colors" href="#servicios">Servicios</a></li>
+          <li><a class="hover:text-primary-container transition-colors" href="#sedes">Sedes</a></li>
+          <li><a class="hover:text-primary-container transition-colors" href="#faq">FAQ</a></li>
+          <li><a class="hover:text-primary-container transition-colors" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2">
+        <h2 class="text-zinc-900 text-lg font-bold mb-10 tracking-widest uppercase">Ubicaciones</h2>
+        <ul class="space-y-6 font-manrope text-base text-zinc-800 font-bold">
+          <li>San Antonio del Táchira, Venezuela</li>
+          <li>Puerto Cabello, Venezuela</li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <h2 class="text-zinc-900 text-lg font-bold mb-10 tracking-widest uppercase">Canales de contacto</h2>
+        <div class="flex flex-col gap-6">
+          <a class="flex items-center gap-5 group" href="mailto:gerencia@ameriva.com.ve">
+            <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 transition-all shadow-sm">
+              <span class="material-symbols-outlined text-blue-600 group-hover:text-white" aria-hidden="true">mail</span>
+            </div>
+            <span class="font-manrope text-base font-bold text-zinc-700">gerencia@ameriva.com.ve</span>
+          </a>
+
+          <a class="flex items-center gap-5 group" href="https://wa.me/584244176230?text=Hola%20Ameriva%2C%20necesito%20asesor%C3%ADa%20para%20un%20tr%C3%A1mite%20aduanero%20o%20nacionalizaci%C3%B3n%20de%20mercanc%C3%ADa." target="_blank" rel="noopener">
+            <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center group-hover:bg-green-600 transition-all shadow-sm">
+              <span class="material-symbols-outlined text-green-600 group-hover:text-white" aria-hidden="true">call</span>
+            </div>
+            <span class="font-manrope text-base font-bold text-zinc-700">+58 424-4176230</span>
+          </a>
+
+          <a class="flex items-center gap-5 group" href="https://instagram.com/Ameriva.ca" target="_blank" rel="noopener">
+            <div class="w-12 h-12 rounded-full bg-pink-50 flex items-center justify-center group-hover:bg-pink-600 transition-all shadow-sm">
+              <span class="material-symbols-outlined text-pink-600 group-hover:text-white" aria-hidden="true">photo_camera</span>
+            </div>
+            <span class="font-manrope text-base font-bold text-zinc-700">@Ameriva.ca</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="md:col-span-2">
+        <h2 class="text-zinc-900 text-lg font-bold mb-10 tracking-widest uppercase">Servicios</h2>
+        <ul class="space-y-6 font-manrope text-base text-zinc-800 font-bold">
+          <li>Importaciones</li>
+          <li>Exportaciones</li>
+          <li>Nacionalización</li>
+          <li>Trámites aduaneros</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="px-6 md:px-12 py-10 border-t border-zinc-100 flex flex-col items-center justify-center gap-4 text-center">
+      <p class="font-manrope text-xs leading-relaxed text-zinc-400 font-medium tracking-wide uppercase">
+        © <span id="current-year"></span> Ameriva. Agencia de aduanas y logística aduanera en Venezuela. Sedes en San Antonio del Táchira y Puerto Cabello.
+      </p>
+      
+    </div>
+  </footer>
+
+  <a href="https://wa.me/584244176230?text=Hola%20Ameriva%2C%20necesito%20asesor%C3%ADa%20para%20un%20tr%C3%A1mite%20aduanero%20o%20nacionalizaci%C3%B3n%20de%20mercanc%C3%ADa." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="fixed bottom-6 right-6 z-[100] transition-transform duration-300 hover:-translate-y-2 hover:scale-110 flex items-center justify-center group"
+     aria-label="Contactar por WhatsApp">
+     
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-16 h-16 drop-shadow-[0_10px_25px_rgba(37,211,102,0.5)]" />
+
+    <span class="absolute right-full mr-4 bg-zinc-900 text-white text-xs font-bold py-1.5 px-3 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+      ¡Escríbenos!
+    </span>
+  </a>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

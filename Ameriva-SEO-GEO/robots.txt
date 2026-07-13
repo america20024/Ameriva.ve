@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ameriva.com.ve/sitemap.xml
